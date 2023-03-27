@@ -1,0 +1,67 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-transform: uppercase;
+    font-family: times;
+}
+
+body {
+    background: black;
+}
+
+.box {
+    width: 10px;
+    height: 10px;
+    margin: 50px auto;
+    position: relative;
+}
+
+.box .startas {
+    width: 30px;
+    height: 40px;
+    background: black;
+    position: absolute;
+    left: 130px;
+}
+
+h1 {
+    color: white;
+    margin-top: 230px;
+    font-family: times;
+    position: absolute;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+h1:before {
+    content: "";
+    width: 20px;
+    height: 100%;   
+    color: black;
+    background: red;
+    position: absolute;
+    left: -24px;
+    transition: 0.4s;
+}
+
+h1:hover::before {  
+    transform: translate(185px); 
+}
+
+h1:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    height: 3px;
+    width: 3px;
+    background: black;
+    transition: 0.2s;
+    transition-delay: 0.25s;
+}
+
+h1:hover::after {
+    background: red;
+    width: 100%; 
+}
